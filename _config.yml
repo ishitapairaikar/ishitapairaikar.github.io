@@ -206,6 +206,15 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  leadership:
+    output: true
+    permalink: /:collection/:path/
+  academic-projects:
+    output: true
+    permalink: /:collection/:path/
+  awards:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -263,6 +272,31 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+    # _leadership
+  - scope:
+      path: ""
+      type: leadership
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  - scope:
+      path: ""
+      type: academic-projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  - scope:
+      path: ""
+      type: awards
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
 
 
 # Sass/SCSS

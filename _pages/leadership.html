@@ -1,0 +1,40 @@
+---
+layout: archive
+title: "Leadership"
+permalink: /leadership/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% comment %}
+If you have leadership categories defined in _config.yml like:
+leadership_category:
+  mentors:
+    title: "Mentors"
+  fellows:
+    title: "Fellows"
+{% endcomment %}
+
+{% if site.leadership_category %}
+  {% for category in site.leadership_category %}
+    {% assign title_shown = false %}
+    {% for post in site.leadership reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+
+      {% unless title_shown %}
+        <h2>{{ category[1].title }}</h2>
+        <hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+
+      {% include _leadership/role1.html post=post %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.leadership reversed %}
+    {% include _leadership/role1.html post=post %}
+  {% endfor %}
+{% endif %}

@@ -11,3 +11,6 @@ end
 
 gem 'github-pages'
 gem 'connection_pool', '2.5.0'
+
+# Needed for Windows timezone support
+gem 'tzinfo-data'

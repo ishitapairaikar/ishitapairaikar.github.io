@@ -1,0 +1,30 @@
+{% include base_path %}
+
+<div class="leadership-item">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+    <h3 class="archive__item-title" itemprop="headline" style="margin: 0; color: black;">
+      {% if post.link %}
+        <a href="{{ post.link }}" target="_blank" style="color: rgb(82, 173, 200); text-decoration: none;">
+          {{ post.title }}
+        </a>
+      {% else %}
+        {{ post.title }}
+      {% endif %}
+    </h3>
+
+    {% if post.start_date or post.end_date %}
+      <p class="page__date" style="margin: 0; font-weight: normal; font-size: 0.85em; color: gray;">
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
+        {{ post.start_date | date: "%B %Y" }} – {{ post.end_date | default: "Present" }}
+      </p>
+    {% endif %}
+  </div>
+
+  {% if post.location %}
+    <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ post.location }}</p>
+  {% endif %}
+
+  <div class="leadership-description">
+    <!-- {{ post.content | markdownify }} -->
+  </div>
+</div>

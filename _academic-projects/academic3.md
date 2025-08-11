@@ -1,6 +1,15 @@
 ---
 title: 'Autonomous Wi-Fi-Enabled Robot (Course – Intro to Embedded Systems)'
+collection: '#'
+category: '#'
+permalink: '#'
+excerpt: '#'
+date: '#'
+venue: '#'
+paperurl: '#'
+citation: '#'
 ---
+
 August 2024 – December 2024
 
 - Designed an autonomous line-tracking bot using TI MSP430, LCD, and C programming, integrating an emitter/detector for navigation  

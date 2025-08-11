@@ -12,4 +12,4 @@ At NC State’s NeuroComputational Ethics Research Group, I study moral decision
 
 My path has been shaped by interdisciplinary collaborations — from startups to policy groups — and a background in classical dance, public speaking, and cultural representation. As 2nd Runner-Up at Miss India USA 2023 and a Top 5 at Miss India Worldwide 2024, I’ve learned to connect across cultures and lead with both presence and purpose.
 
-I’m currently applying to PhD programs in Human-Computer Interaction. If you’re working on technology that combines AI, ethics, and human-centered design, I’d love to connect and explore ways we might collaborate.
+I’m currently applying to PhD programs in Human-Computer Interaction. If you’re working on technology that combines AI, ethics, and human-centered design, I’d love to connect!

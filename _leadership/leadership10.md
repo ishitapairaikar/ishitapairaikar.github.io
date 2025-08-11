@@ -1,5 +1,5 @@
 ---
-title: '<a href="LINK" target="_blank" style="color:rgb(82, 173, 200)">Head of Service & Fundraising Committee | Dover Court International School, Singapore</a>'
+title: 'Head of Service & Fundraising Committee | Dover Court International School, Singapore'
 collection: publications
 category: experience
 permalink: /publication/2018-09-01-head-service-fundraising-dover-court

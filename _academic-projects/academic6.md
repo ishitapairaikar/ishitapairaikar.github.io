@@ -1,13 +1,13 @@
 ---
 title: 'Estimating the Age of the Universe through Redshift Analysis and Hubble’s Law (Course – IB Diploma Physics)'
-collection: publications
-category: experience
-permalink: /publication/2020-06-01-age-of-universe-redshift
-excerpt: 'Research on cosmic expansion and age estimation of the universe using Hubble’s Law.'
-date: 2020-06-01
-venue: 'IB Diploma Physics'
+collection: '#'
+category: '#'
+permalink: '#'
+excerpt: '#'
+date: '#'
+venue: '#'
 paperurl: '#'
-citation: 'Estimating the Age of the Universe (June 2020 – December 2020)'
+citation: '#'
 ---
 
 June 2020 – December 2020

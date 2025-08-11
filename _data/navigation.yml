@@ -10,27 +10,25 @@
 main:
   - title: "Publications"
     url: /publications/
-
-  - title: "Talks"
-    url: /talks/    
-
-  - title: "Teaching"
-    url: /teaching/    
-
-  - title: "Academic Projects"
+    
+  - title: "Projects"
     url: /academic-projects/
-
+    
   - title: "Awards"
     url: /awards/
 
   - title: "Leadership"
     url: /leadership/
     
+  - title: "Talks"
+    url: /talks/    
+
+  - title: "Teaching"
+    url: /teaching/    
+    
   - title: "CV"
     url: /cv/
     
   # - title: "CV"
   #   url: /cv-json/
-    
-  # - title: "Guide"
-  #   url: /markdown/
+

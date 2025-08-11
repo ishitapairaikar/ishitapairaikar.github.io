@@ -4,7 +4,7 @@ collection: '#'
 category: '#'
 permalink: '#'
 excerpt: '#'
-date: '#'
+date: 2020-12-01
 venue: '#'
 paperurl: '#'
 citation: '#'

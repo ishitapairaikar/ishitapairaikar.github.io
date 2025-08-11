@@ -1,6 +1,15 @@
 ---
 title: 'Mathematical Formalisation of Bharatanatyam: An Interdisciplinary Inquiry into Classical Dance and Quantitative Modelling (Course – IB Diploma Mathematics)'
+collection: '#'
+category: '#'
+permalink: '#'
+excerpt: '#'
+date: '#'
+venue: '#'
+paperurl: '#'
+citation: '#'
 ---
+
 June 2020 – December 2020
 
 - Explored the mathematical representation of Bharatanatyam choreography, translating intricate footwork and hand gestures into models using vectors, polar coordinates, and calculus  

@@ -4,7 +4,7 @@ collection: '#'
 category: '#'
 permalink: '#'
 excerpt: '#'
-date: '#'
+date: 2024-12-03
 venue: '#'
 paperurl: '#'
 citation: '#'

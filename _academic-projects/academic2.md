@@ -1,15 +1,6 @@
 ---
 title: 'EEG-to-Text for Speech Impaired Individuals using CNN Architecture (Course – Neural Networks)'
-collection: publications
-category: experience
-permalink: /publication/2025-01-01-eeg-to-text-cnn-architecture
-excerpt: 'Developed and trained a CNN model to translate EEG signals to text for speech-impaired individuals.'
-date: 2025-01-01
-venue: 'Neural Networks Course'
-paperurl: '#'
-citation: 'EEG-to-Text using CNN Architecture (January 2025 – May 2025)'
 ---
-
 January 2025 – May 2025
 
 - Replicated a published paper on PCA + linear regression EEG-to-text baseline on one patient to establish personalized performance  

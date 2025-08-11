@@ -8,7 +8,7 @@ redirect_from:
 ---
 I’m a final-year Computer Engineering student at NC State University, minoring in Philosophy (graduating Dec ’25). My research lies at the intersection of human-AI interaction, ethical design, and intelligent systems, with the goal of creating AI that listens and adapts to people — not just responds.
 
-At NC State’s NeuroComputational Ethics Research Group, I study moral decision-making in healthcare robotics and develop speech-based systems to support independent aging. At the University of Auckland’s Empathic Computing Lab, I contribute to emotion-aware AI research grounded in wearable sensing, self-reports, and Māori Data Sovereignty. I also advocate for responsible AI and policy through the Future World Alliance and as a Fellow of the Royal Society of Arts (UK), bridging research and governance to inform how AI is developed and deployed.
+At NC State’s NeuroComputational Ethics Research Group, I study moral decision-making in healthcare robotics and develop speech-based systems to support independent aging. At the University of Auckland’s Empathic Computing Lab, I contribute to emotion-aware AI research grounded in wearable sensing, self-reports, and Māori Data Sovereignty. I have previously advocated for responsible AI and policy through the Future World Alliance and as a Fellow of the Royal Society of Arts (UK).
 
 My path has been shaped by interdisciplinary collaborations — from startups to policy groups — and a background in classical dance, public speaking, and cultural representation. As 2nd Runner-Up at Miss India USA 2023 and a Top 5 at Miss India Worldwide 2024, I’ve learned to connect across cultures and lead with both presence and purpose.
 

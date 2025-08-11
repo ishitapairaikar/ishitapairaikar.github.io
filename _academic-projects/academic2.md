@@ -1,6 +1,15 @@
 ---
 title: 'EEG-to-Text for Speech Impaired Individuals using CNN Architecture (Course – Neural Networks)'
+collection: '#'
+category: '#'
+permalink: '#'
+excerpt: '#'
+date: '#'
+venue: '#'
+paperurl: '#'
+citation: '#'
 ---
+
 January 2025 – May 2025
 
 - Replicated a published paper on PCA + linear regression EEG-to-text baseline on one patient to establish personalized performance  

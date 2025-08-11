@@ -4,11 +4,11 @@ collection: publications
 category: manuscripts
 permalink: /publication/2009-10-01-paper-title-number-2
 excerpt: ''
-date:  ''
-venue: ''
-slidesurl: ''
-paperurl: ''
-bibtexurl: ''
+date: 2009-10-01
+venue: 'Journal 1'
+slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
+paperurl: 'http://academicpages.github.io/files/paper2.pdf'
+bibtexurl: 'http://academicpages.github.io/files/bibtex2.bib'
 citation: ''
 ---
 

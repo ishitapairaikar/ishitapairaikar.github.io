@@ -1,5 +1,5 @@
 ---
-title: 'Head Student | Dover Court International School, Singapore</a>'
+title: 'Head Student | Dover Court International School, Singapore'
 collection: publications
 category: experience
 permalink: /publication/2019-09-01-head-student-dover-court

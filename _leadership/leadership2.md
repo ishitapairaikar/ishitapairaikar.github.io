@@ -1,5 +1,5 @@
 ---
-title: '<a href="#" target="_blank" style="color:rgb(82, 173, 200)">Mentor | Neurocomputational Ethics Research Group, NC State University, USA</a>'
+title: 'Mentor | Neurocomputational Ethics Research Group, NC State University, USA'
 collection: publications
 category: experience
 permalink: /publication/2024-06-01-neurocomputational-ethics-mentor

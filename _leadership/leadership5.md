@@ -1,5 +1,5 @@
 ---
-title: '<a href="LINK" target="_blank" style="color:rgb(82, 173, 200)">Corporate Chair | Women in Electrical and Engineering (WiECE) Club, NC State University, USA</a>'
+title: 'Corporate Chair | Women in Electrical and Engineering (WiECE) Club, NC State University, USA'
 collection: publications
 category: experience
 permalink: /publication/2022-08-01-wiece-corporate-chair

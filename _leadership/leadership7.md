@@ -1,5 +1,5 @@
 ---
-title: '<a href="LINK" target="_blank" style="color:rgb(82, 173, 200)">Strategy Intern | Future World Alliance, USA</a>'
+title: 'Strategy Intern | Future World Alliance, USA'
 collection: publications
 category: experience
 permalink: /publication/2022-10-01-future-world-alliance-intern

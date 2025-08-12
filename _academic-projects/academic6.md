@@ -1,16 +1,16 @@
 ---
-title: 'Estimating the Age of the Universe through Redshift Analysis and Hubble’s Law (Course – IB Diploma Physics)'
-collection: publications
-category: experience
-permalink: /publication/2020-06-01-age-of-universe-redshift
-excerpt: 'Research on cosmic expansion and age estimation of the universe using Hubble’s Law.'
-date: 2020-06-01
-venue: 'IB Diploma Physics'
+title: 'Gardian: AI-Powered Garden Protection Robot (Course – Engineering Entrepreneurship Senior Design)'
+collection: '#'
+category: '#'
+permalink: '#'
+excerpt: '#'
+date: 2025-05-20
+venue: '#'
 paperurl: '#'
-citation: 'Estimating the Age of the Universe (June 2020 – December 2020)'
+citation: '#'
 ---
 
-June 2020 – December 2020
+August 2024 – May 2025
 
-- Investigated the correlation between galactic distance and recessional velocity to approximate Hubble’s constant and, by extension, the age of the universe  
-- Leveraged SIMBAD astronomical database to source high-redshift galaxy data and apply regression techniques to analyze large-scale cosmic expansion  
+- Designed an embedded vision system with machine learning for real-time animal detection and automated deterrence using a custom nozzle system and relay boards  
+- As CEO, led business planning, prototype iterations, and team coordination while overseeing the strategic direction in a startup-style course  

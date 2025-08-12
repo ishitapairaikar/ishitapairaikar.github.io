@@ -10,7 +10,10 @@ paperurl: '#'
 citation: '#'
 ---
 
-June 2020 – December 2020
+- Designed an embedded vision system with machine learning for real-time animal detection and automated deterrence using a custom nozzle system and relay boards  
+- As CEO, led business planning, prototype iterations, and team coordination while overseeing the strategic direction in a startup-style course  
 
-- Investigated the correlation between galactic distance and recessional velocity to approximate Hubble’s constant and, by extension, the age of the universe  
-- Leveraged SIMBAD astronomical database to source high-redshift galaxy data and apply regression techniques to analyze large-scale cosmic expansion  
+<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+  <img src="/assets/image/1T4A9567-edit.jpg" alt="Gardian Robot Prototype 1" style="width: 48%; border-radius: 8px;">
+  <img src="/assets/image/Ishita-Pai-Raikar-3-1920x1080-1-wpv_2000x1333_center_center.jpeg" alt="Gardian Robot Prototype 2" style="width: 48%; border-radius: 8px;">
+</div>

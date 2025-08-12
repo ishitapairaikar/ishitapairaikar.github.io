@@ -9,6 +9,10 @@ redirect_from:
 
 {% include base_path %}
 
+<a href="{{ '/assets/Cv.pdf'}}" target="_blank">
+  📄 Click here to see CV
+</a>
+
 # Education
 
 - North Carolina State University, Raleigh, NC, USA -
@@ -34,20 +38,21 @@ redirect_from:
 - Research Assistant | Neurocomputational Ethics Research Group, NC State University, USA
   May 2022 – Present
 
-  - Embodied Social AI: Personal Robots for Aging at Home (in collaboration with Active Robotic Sensing Laboratory; Guided by Dr. Edgar Lobaton and Dr. Veljko Dubljević)  
-    
+  - Embodied Social AI: Personal Robots for Aging at Home (in collaboration with Active Robotic Sensing Laboratory; Guided by Dr. Edgar Lobaton and Dr. Veljko Dubljević)
+
     - Engineered a real-time speech interaction system for Pepper robot using Whisper ASR, Ollama-hosted LLMs and a structured state machine via NVIDIA Jetson AGX Orin to enable context-aware conversations in aging-in-place scenarios
 
     - Supporting a pilot study targeting older adults with mild cognitive impairment, improving social robot responsiveness for healthcare environments
 
   - Virtual Reality simulations of moral decision making for Autonomous Vehicles and Social Care Robots (Guided by Dr. Veljko Dubljević)
-    
+
     - Developing virtual reality simulations to study moral decision-making in human-robot interactions, applying ethical frameworks in real-world scenarios for autonomous systems
 
     - Mentoring interns and leading interdisciplinary projects to embed ethics into autonomous systems, managing the logistics, marketing, and outreach for the “AI Revolution: an #EthicsQuest across disciplines” panel series
 
 - Pre-Sales Intern | Graymatics, Singapore
   July 2019 – August 2019
+
   - Spearheaded dataset annotation for license plate detection, improving model accuracy and optimizing annotation workflows
 
     - Elevated client engagement and improved project conversion rates by delivering compelling, data-driven presentations and targeted proposals for SMART cities and AI-driven healthcare projects
@@ -56,33 +61,33 @@ redirect_from:
 
 # Skills
 
--	Programming Languages:
-    - Python, C, C++, C#
--	Microcontrollers/Platforms: 
-    - Raspberry Pi, TI MSP430, NVIDIA Jetson Orin, Jetson Nano
--	Frameworks
-    - Unity Engine, NumPy, Pandas, Scikit-learn, Matplotlib, GStreamer, Docker, PyTorch
+- Programming Languages:
+  - Python, C, C++, C#
+- Microcontrollers/Platforms:
+  - Raspberry Pi, TI MSP430, NVIDIA Jetson Orin, Jetson Nano
+- Frameworks
+  - Unity Engine, NumPy, Pandas, Scikit-learn, Matplotlib, GStreamer, Docker, PyTorch
 - Networking & Protocols:
-    - RTSP, UDP, TCP/IP
+  - RTSP, UDP, TCP/IP
 
 <!-- # Publications
 
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
 Talks
 ======
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
-  
+
 Teaching
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams -->

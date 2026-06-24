@@ -20,9 +20,6 @@
 html{scroll-behavior:smooth;}
 body{font-family:var(--sans);background:var(--bg);color:var(--dark);line-height:1.65;font-size:16px;overflow-x:hidden;}
 
-.marquee-bar{position:fixed;top:0;left:0;right:0;z-index:201;height:26px;background:#c9a85c;overflow:hidden;display:flex;align-items:center;}
-.marquee-track{display:flex;white-space:nowrap;animation:mq 40s linear infinite;}
-.marquee-track span{font-family:var(--mono);font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#1a2838;padding-right:3.5rem;}
 @keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 nav{position:fixed;top:26px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:.8rem 2.5rem;background:#1a2838;border-bottom:.5px solid rgba(0,0,0,.18);}
 .nav-logo{font-family:var(--serif);font-size:1rem;font-weight:400;color:#f2f4f7;text-decoration:none;}
@@ -299,12 +296,6 @@ img.zoomable:hover{opacity:.88;}
 </style>
 </head>
 <body>
-
-<div class="marquee-bar" aria-label="Open to work">
-  <div class="marquee-track">
-    <span>✦ Open to Work full-time opportunities in AI/ML/Robotics Engineering ✦ View my resume below. ✦ Open to Work full-time opportunities in AI/ML/Robotics Engineering </span>
-  </div>
-</div>
 
 <nav style="position:relative;">
   <a href="#hero" class="nav-logo">Ishita Pai Raikar</a>

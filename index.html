@@ -20,7 +20,11 @@
 html{scroll-behavior:smooth;}
 body{font-family:var(--sans);background:var(--bg);color:var(--dark);line-height:1.65;font-size:16px;overflow-x:hidden;}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:.8rem 2.5rem;background:#1a2838;border-bottom:.5px solid rgba(0,0,0,.18);}
+.marquee-bar{position:fixed;top:0;left:0;right:0;z-index:201;height:26px;background:#c9a85c;overflow:hidden;display:flex;align-items:center;}
+.marquee-track{display:flex;white-space:nowrap;animation:mq 28s linear infinite;}
+.marquee-track span{font-family:var(--mono);font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#1a2838;padding-right:3.5rem;}
+@keyframes mq{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+nav{position:fixed;top:26px;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:.8rem 2.5rem;background:#1a2838;border-bottom:.5px solid rgba(0,0,0,.18);}
 .nav-logo{font-family:var(--serif);font-size:1rem;font-weight:400;color:#f2f4f7;text-decoration:none;}
 .nav-links{display:flex;gap:1.5rem;list-style:none;}
 .nav-links a{font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,244,247,.55);text-decoration:none;transition:color .18s;}
@@ -63,7 +67,7 @@ section{padding:5rem 0;}
 
 /* HERO */
 #hero{display:flex;align-items:flex-start;padding:0;position:relative;overflow:hidden;}
-.hero-inner{max-width:960px;margin:0 auto;padding:3.5rem 2.5rem 3rem;display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center;width:100%;}
+.hero-inner{max-width:960px;margin:0 auto;padding:5rem 2.5rem 3rem;display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center;width:100%;}
 .hero-badge{display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);background:var(--accent-p);padding:.26rem .65rem;border-radius:1px;margin-bottom:1.2rem;}
 .hero-name{font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.4rem);line-height:1.04;font-weight:300;color:var(--dark);margin-bottom:.8rem;letter-spacing:-.01em;}
 .hero-name em{font-style:italic;color:var(--accent);}
@@ -114,14 +118,14 @@ section{padding:5rem 0;}
 #work{background:var(--bg2);}
 .timeline{position:relative;padding-left:1.5rem;margin-top:1.75rem;}
 .timeline::before{content:'';position:absolute;left:0;top:.35rem;bottom:0;width:1px;background:var(--rule);}
-.tl-item{position:relative;padding:0 0 2rem 1.5rem;}
+.tl-item{position:relative;padding:0 0 1.4rem 1.5rem;}
 .tl-item:last-child{padding-bottom:0;}
 .tl-dot{position:absolute;left:-1.5rem;top:.35rem;width:7px;height:7px;border-radius:50%;background:var(--faint);border:1.5px solid var(--bg2);margin-left:-.2rem;}
-.tl-date{font-family:var(--mono);font-size:.6rem;color:var(--faint);margin-bottom:.28rem;}
-.tl-role{font-family:var(--serif);font-size:.98rem;font-weight:400;color:var(--dark);margin-bottom:.06rem;}
-.tl-org{font-family:var(--mono);font-size:.62rem;color:var(--accent);margin-bottom:.42rem;}
-.tl-pts{list-style:none;display:flex;flex-direction:column;gap:.22rem;}
-.tl-pts li{font-size:.79rem;color:var(--muted);line-height:1.58;font-weight:300;padding-left:.75rem;position:relative;}
+.tl-date{font-family:var(--mono);font-size:.58rem;color:var(--faint);margin-bottom:.2rem;}
+.tl-role{font-family:var(--serif);font-size:.95rem;font-weight:400;color:var(--dark);margin-bottom:.04rem;}
+.tl-org{font-family:var(--mono);font-size:.6rem;color:var(--accent);margin-bottom:.32rem;}
+.tl-pts{list-style:none;display:flex;flex-direction:column;gap:.15rem;}
+.tl-pts li{font-size:.77rem;color:var(--muted);line-height:1.52;font-weight:300;padding-left:.75rem;position:relative;}
 .tl-pts li::before{content:'/';position:absolute;left:0;color:var(--faint);font-family:var(--mono);font-size:.68rem;}
 .cv-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.75rem;font-size:.78rem;color:var(--muted);text-decoration:none;border:.5px solid var(--rule);padding:.5rem .95rem;transition:border-color .18s,color .18s;}
 .cv-link:hover{color:var(--dark);border-color:var(--muted);}
@@ -296,6 +300,13 @@ img.zoomable:hover{opacity:.88;}
 </head>
 <body>
 
+<div class="marquee-bar" aria-label="Open to work">
+  <div class="marquee-track">
+    <span>✦ Open to Work · AI / ML / Robotics Engineering ✦ Open to Work · AI / ML / Robotics Engineering ✦ Open to Work · AI / ML / Robotics Engineering ✦ Open to Work · AI / ML / Robotics Engineering</span>
+    <span>✦ Open to Work · AI / ML / Robotics Engineering ✦ Open to Work · AI / ML / Robotics Engineering ✦ Open to Work · AI / ML / Robotics Engineering ✦ Open to Work · AI / ML / Robotics Engineering</span>
+  </div>
+</div>
+
 <nav style="position:relative;">
   <a href="#hero" class="nav-logo">Ishita Pai Raikar</a>
   <button class="nav-hamburger" id="nav-btn" aria-label="Menu">
@@ -321,7 +332,8 @@ img.zoomable:hover{opacity:.88;}
       <div class="btn-row">
         <a href="#work" class="btn btn-dark">Experience</a>
         <a href="#research" class="btn btn-ghost">Research</a>
-        <a href="#contact" class="btn btn-ghost">Contact</a>
+        <a href="#" class="btn btn-ghost" id="resume-btn">View Resume</a>
+        <a href="https://calendar.app.google/NDHDL58CvWpr1QET7" target="_blank" class="btn btn-accent">Schedule Coffee Chat</a>
       </div>
     </div>
     <div class="hero-right">
@@ -350,7 +362,7 @@ img.zoomable:hover{opacity:.88;}
   <div class="qs-inner">
     <span class="qs-mark">"</span>
     <div class="qs-body">
-      <p class="qs-text">What is AI? Is it only technological, or existential too? Extension of human intelligence, or its replacement? <em>I integrate my curiosity, my learnings, and my experiences to co-create the right perspective.</em></p>
+      <p class="qs-text">What is AI? Merely technological — or existential too? An extension of human intelligence, or its replacement? <em>I bring my curiosity, my learning, and my lived experience to bear on that question.</em></p>
       <p class="qs-theme">On curiosity as compass</p>
     </div>
   </div>
@@ -471,11 +483,22 @@ img.zoomable:hover{opacity:.88;}
       </div>
       <div class="tl-item">
         <div class="tl-dot" style="background:var(--bg2);border-color:var(--faint);"></div>
-        <p class="tl-date">2024-2025</p>
+        <p class="tl-date">2024–2025</p>
         <p class="tl-role" style="font-size:.92rem;">Gardian: AI-Powered Garden Protection Robot</p>
         <p class="tl-org">Engineering Entrepreneurship Senior Design</p>
         <ul class="tl-pts">
           <li>85% on-device animal detection accuracy via Edge Impulse ML on ESP32-CAM; led team of 4 as CEO through 3 prototype iterations.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--bg2);border-color:var(--faint);"></div>
+        <p class="tl-date">2020–2022</p>
+        <p class="tl-role">Founder &amp; Director</p>
+        <p class="tl-org">GlobeUplift · Global Youth-Led Nonprofit</p>
+        <ul class="tl-pts">
+          <li>Founded at 16; scaled to 50+ ambassadors across 6 countries and 3,000+ social media followers through campaigns spanning education, sustainability, and equity.</li>
+          <li>Hosted Learn@GlobeUplift interview series during COVID-19, featuring the Director of Google Search and a BBC-accredited environmentalist.</li>
+          <li>Mobilized community initiatives that reached 600+ frontline healthcare workers during the pandemic.</li>
         </ul>
       </div>
     </div>
@@ -644,7 +667,7 @@ img.zoomable:hover{opacity:.88;}
     </div>
     <div class="gig-row">
       <span class="gig-yr">2024</span>
-      <div><a href="https://www.youtube.com/playlist?list=PL2a9PLBOpKABC8yKEKE40BO9eL8e-UY6E" target="_blank" class="gig-name" style="text-decoration:none;color:inherit;">AI Revolution: EthicsQuest Across Disciplines ↗</a><div class="gig-org">NC State + Future World Alliance + 15+ institutional partners · Series host and moderator</div></div>
+      <div><a href="https://www.youtube.com/watch?v=PsrzA4KqFDM&list=PL2a9PLBOpKABC8yKEKE40BO9eL8e-UY6E" target="_blank" class="gig-name" style="text-decoration:none;color:inherit;">AI Revolution: EthicsQuest Across Disciplines ↗</a><div class="gig-org">NC State + Future World Alliance + 15+ institutional partners · Series host and moderator</div></div>
       <span class="gig-type">Series host</span>
     </div>
     <div class="gig-row">
@@ -706,7 +729,7 @@ img.zoomable:hover{opacity:.88;}
       <div class="fwa-right">
         <div class="fcard"><p class="fcard-eye">Funder positioning</p><h3 class="fcard-title">Turning cohort data into narrative</h3><p class="fcard-body">Surfaced the 48% AI Launchpad completion rate against industry benchmarks and built the data story that makes FWA's impact legible to institutional partners.</p></div>
         <div class="fcard"><p class="fcard-eye">Content creation</p><h3 class="fcard-title">19 episodes across 2 original series</h3><p class="fcard-body">Script, visual direction, and platform strategy end to end. AI ethics and governance made accessible to non-technical audiences.</p></div>
-        <div class="fcard"><p class="fcard-eye">EthicsQuest</p><h3 class="fcard-title">AI Revolution panel series co-creator</h3><p class="fcard-body">15+ institutional partners, co-created with NC State's Data Science Academy, featuring Dean Yannis Yortsos.</p></div>
+        <div class="fcard"><p class="fcard-eye">EthicsQuest</p><h3 class="fcard-title"><a href="https://www.youtube.com/watch?v=PsrzA4KqFDM&list=PL2a9PLBOpKABC8yKEKE40BO9eL8e-UY6E" target="_blank" style="color:inherit;text-decoration:none;">AI Revolution panel series co-creator ↗</a></h3><p class="fcard-body">15+ institutional partners, co-created with NC State's Data Science Academy, featuring Dean Yannis Yortsos.</p></div>
         <img src="IPR/IPR_Panel.jfif" alt="Panel event" style="width:100%;height:auto;display:block;border-radius:1px;" class="zoomable">
       </div>
     </div>
@@ -799,7 +822,7 @@ const nodeData = {
   'nc-2':{label:'Artist',title:'14 years Bharatanatyam. TEDxYouth at 16.',body:'Classically trained under Guru Vidushi Dr. M.S. Srilakshmi. Arangetram debut before 400+. Aryabhata International Award. Dance movement grammar informed robot gesture design.'},
   'nc-3':{label:'Public Communicator',title:'TEDxYouth, panels, congressional advocacy, keynotes',body:'TEDxYouth on TED.com. SparkNC keynote at The Exchange 2025. EthicsQuest moderator, 15+ institutional partners. DC FIIDS advocacy. IEEE Ethics Competition, 2nd place.'},
   'nc-4':{label:'Miss India Worldwide 2024, Top 5',title:'Miss India USA 2023, 2nd Runner-up · Miss India NC 2022, 2nd Runner-up',body:'Used the platform to advocate for women in STEM and AI ethics. The ramp you stand on does not define you. The ideas you carry onto it do.'},
-  'nc-5':{label:'Cross-cultural Advocate',title:'India, Singapore, US · DC policy · GlobeUplift',body:'Founded GlobeUplift at 16: 65 ambassadors, 6 countries, 600+ healthcare workers honoured. DC congressional AI ethics briefings. Social Innovation Fellow, NC Blue Economy Report 2024.'},
+  'nc-5':{label:'Cross-cultural Advocate',title:'India, Singapore, US · DC policy · GlobeUplift',body:'Founded GlobeUplift at 16: 65 ambassadors, 6 countries, 600+ healthcare workers honoured. DC congressional AI ethics advocacy. Social Innovation Fellow, NC Blue Economy Report 2024.'},
   'nc-6':{label:'Responsible AI Strategist',title:'Governance frameworks, ethics curriculum',body:'AI governance blueprints, RACI frameworks, stakeholder mapping. FWA AI ethics content. EthicsQuest co-creator. Informed by IBM AI Governance in Action methodology via Phaedra Boinodiris.'}
 };
 const detail = document.getElementById('const-detail');

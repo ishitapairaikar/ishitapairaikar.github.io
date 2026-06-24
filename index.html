@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ishita Pai Raikar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f2f4f7;--bg2:#e8ecf1;--dark:#1a2838;--dark2:#243649;
+  --muted:#5a7080;--faint:#8ea5b5;
+  --accent:#a05a1a;--accent-l:#ead8c0;--accent-p:#f5ece0;
+  --forest:#1e5040;--forest-l:#bdd8ce;
+  --serif:'Spectral',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace;
+  --rule:rgba(26,40,56,.09);
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--sans);background:var(--bg);color:var(--dark);line-height:1.65;font-size:16px;overflow-x:hidden;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:.8rem 2.5rem;background:rgba(242,244,247,.96);backdrop-filter:blur(14px);border-bottom:.5px solid var(--rule);}
+.nav-logo{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--dark);text-decoration:none;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;}
+.nav-links a{font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);text-decoration:none;transition:color .18s;}
+.nav-links a:hover{color:var(--dark);}
+
+section{padding:5rem 0;}
+.wrap{max-width:960px;margin:0 auto;padding:0 2.5rem;}
+.divider{height:.5px;background:var(--rule);}
+.eye{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:.6rem;}
+.stitle{font-family:var(--serif);font-size:clamp(1.85rem,3vw,2.6rem);font-weight:300;line-height:1.15;color:var(--dark);margin-bottom:1.5rem;}
+.stitle em{font-style:italic;color:var(--accent);}
+.lead{font-size:1rem;color:var(--muted);line-height:1.8;font-weight:300;max-width:520px;}
+
+.btn{display:inline-block;padding:.5rem 1.25rem;font-size:.74rem;font-weight:500;letter-spacing:.04em;border-radius:1px;text-decoration:none;transition:all .18s;font-family:var(--sans);}
+.btn-dark{background:var(--dark);color:var(--bg);border:1px solid var(--dark);}
+.btn-dark:hover{background:var(--dark2);}
+.btn-ghost{background:transparent;color:var(--dark);border:1px solid rgba(26,40,56,.18);}
+.btn-ghost:hover{border-color:var(--muted);}
+.btn-accent{background:var(--accent);color:#fff;border:none;}
+
+.imgph{background:var(--bg2);border:1.5px dashed var(--faint);border-radius:1px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;text-align:center;padding:1.5rem;}
+.imgph-icon{font-size:1.4rem;opacity:.22;}
+.imgph-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);}
+.imgph-sub{font-size:.58rem;color:var(--faint);font-weight:300;}
+
+/* INLINE QUOTE STRIPE */
+.quote-stripe{padding:3rem 0;background:var(--dark);}
+.qs-inner{max-width:960px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;gap:2rem;}
+.qs-mark{font-family:var(--serif);font-size:3.5rem;font-weight:300;color:rgba(201,168,92,.25);line-height:.6;flex-shrink:0;margin-top:.3rem;}
+.qs-body{flex:1;}
+.qs-text{font-family:var(--serif);font-size:1.05rem;font-weight:300;font-style:italic;color:rgba(242,244,247,.82);line-height:1.65;}
+.qs-text em{font-style:normal;color:#c9a85c;}
+.qs-theme{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,244,247,.28);margin-top:.6rem;}
+.quote-stripe-light{padding:2.5rem 0;background:var(--bg2);}
+.qs-inner-light{max-width:960px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;gap:2rem;}
+.qs-mark-light{font-family:var(--serif);font-size:3.5rem;font-weight:300;color:rgba(160,90,26,.15);line-height:.6;flex-shrink:0;margin-top:.3rem;}
+.qs-text-light{font-family:var(--serif);font-size:1.02rem;font-weight:300;font-style:italic;color:var(--muted);line-height:1.65;}
+.qs-text-light em{font-style:normal;color:var(--accent);}
+.qs-theme-light{font-family:var(--mono);font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:.55rem;}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:0;position:relative;overflow:hidden;}
+.hero-inner{max-width:960px;margin:0 auto;padding:5.5rem 2.5rem 0;display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center;width:100%;}
+.hero-badge{display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);background:var(--accent-p);padding:.26rem .65rem;border-radius:1px;margin-bottom:1.2rem;}
+.hero-name{font-family:var(--serif);font-size:clamp(2.6rem,5vw,4.4rem);line-height:1.04;font-weight:300;color:var(--dark);margin-bottom:.8rem;letter-spacing:-.01em;}
+.hero-name em{font-style:italic;color:var(--accent);}
+.hero-sub{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;font-weight:300;}
+.btn-row{display:flex;gap:.65rem;flex-wrap:wrap;}
+.hero-right{display:flex;flex-direction:column;gap:.55rem;}
+.fact{padding:.7rem .85rem;background:var(--bg2);border:.5px solid var(--rule);}
+.fact-label{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:.22rem;}
+.fact-val{font-family:var(--serif);font-size:.85rem;color:var(--dark);line-height:1.3;font-style:italic;}
+
+/* BAND */
+.band{background:var(--dark);padding:2.5rem 0;}
+.band-inner{max-width:960px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:repeat(4,1fr);}
+.bstat{text-align:center;padding:0 .75rem;border-right:.5px solid rgba(242,244,247,.08);}
+.bstat:last-child{border-right:none;}
+.bnum{font-family:var(--serif);font-size:2.5rem;font-weight:300;color:var(--bg);line-height:1;margin-bottom:.25rem;}
+.bnum em{font-style:italic;color:#c9a85c;}
+.blabel{font-size:.68rem;font-weight:300;color:rgba(242,244,247,.42);line-height:1.45;}
+
+/* ABOUT */
+#about{background:var(--bg);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.about-prose p{font-size:.94rem;color:var(--muted);line-height:1.85;margin-bottom:1rem;font-weight:300;}
+.about-prose p strong{color:var(--dark);font-weight:500;}
+.pullquote{border-left:2px solid var(--accent);padding-left:1rem;margin:1.5rem 0;font-family:var(--serif);font-size:1.05rem;font-weight:300;font-style:italic;color:var(--dark2);line-height:1.5;}
+.photo-strip{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.9rem;}
+
+/* CONSTELLATION */
+.constellation-wrap{position:relative;width:100%;max-width:380px;}
+.constellation-wrap svg{width:100%;height:auto;display:block;}
+.const-detail{margin-top:.65rem;min-height:72px;padding:.85rem 1rem;background:var(--dark);opacity:0;transition:opacity .2s;pointer-events:none;}
+.const-detail.show{opacity:1;}
+.vd-label{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:#c9a85c;margin-bottom:.2rem;}
+.vd-title{font-family:var(--serif);font-size:.85rem;color:var(--bg);margin-bottom:.12rem;}
+.vd-body{font-size:.7rem;color:rgba(242,244,247,.48);font-weight:300;line-height:1.55;}
+.const-hint{font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-top:.5rem;text-align:center;}
+.const-hint span{color:var(--accent);}
+
+/* BLUE QUOTE STRIPE */
+.quote-stripe-blue{padding:2.5rem 0;background:#1a2e4a;}
+.qs-inner-blue{max-width:960px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;gap:2rem;}
+.qs-mark-blue{font-family:var(--serif);font-size:3.5rem;font-weight:300;color:rgba(142,165,181,.2);line-height:.6;flex-shrink:0;margin-top:.3rem;}
+.qs-text-blue{font-family:var(--serif);font-size:1.02rem;font-weight:300;font-style:italic;color:rgba(242,244,247,.78);line-height:1.65;}
+.qs-text-blue em{font-style:normal;color:#8ea5b5;}
+.qs-theme-blue{font-family:var(--mono);font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(142,165,181,.42);margin-top:.55rem;}
+
+/* WORK TIMELINE */
+#work{background:var(--bg2);}
+.timeline{position:relative;padding-left:1.5rem;margin-top:1.75rem;}
+.timeline::before{content:'';position:absolute;left:0;top:.35rem;bottom:0;width:1px;background:var(--rule);}
+.tl-item{position:relative;padding:0 0 2rem 1.5rem;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{position:absolute;left:-1.5rem;top:.35rem;width:7px;height:7px;border-radius:50%;background:var(--faint);border:1.5px solid var(--bg2);margin-left:-.2rem;}
+.tl-date{font-family:var(--mono);font-size:.6rem;color:var(--faint);margin-bottom:.28rem;}
+.tl-role{font-family:var(--serif);font-size:.98rem;font-weight:400;color:var(--dark);margin-bottom:.06rem;}
+.tl-org{font-family:var(--mono);font-size:.62rem;color:var(--accent);margin-bottom:.42rem;}
+.tl-pts{list-style:none;display:flex;flex-direction:column;gap:.22rem;}
+.tl-pts li{font-size:.79rem;color:var(--muted);line-height:1.58;font-weight:300;padding-left:.75rem;position:relative;}
+.tl-pts li::before{content:'/';position:absolute;left:0;color:var(--faint);font-family:var(--mono);font-size:.68rem;}
+.cv-link{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.75rem;font-size:.78rem;color:var(--muted);text-decoration:none;border:.5px solid var(--rule);padding:.5rem .95rem;transition:border-color .18s,color .18s;}
+.cv-link:hover{color:var(--dark);border-color:var(--muted);}
+
+/* RESEARCH */
+#research{background:var(--bg);}
+.research-top{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:2.5rem;}
+.anchor{background:var(--dark);padding:2rem;margin-bottom:1.5rem;}
+.anchor-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+.anch-eye{font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,244,247,.28);margin-bottom:.5rem;}
+.anch-title{font-family:var(--serif);font-size:1.2rem;font-weight:300;line-height:1.22;color:var(--bg);margin-bottom:.6rem;}
+.anch-body{font-size:.82rem;color:rgba(242,244,247,.52);line-height:1.7;font-weight:300;margin-bottom:1.1rem;}
+.anch-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;}
+.astat{padding:.7rem .75rem;background:rgba(242,244,247,.05);border:.5px solid rgba(242,244,247,.09);}
+.astat-n{font-family:var(--serif);font-size:1.65rem;font-weight:300;color:#c9a85c;line-height:1;}
+.astat-l{font-size:.62rem;color:rgba(242,244,247,.38);font-weight:300;margin-top:.15rem;}
+.qpull{margin-top:1rem;padding:.9rem 1.1rem;border-left:2px solid #c9a85c;background:rgba(242,244,247,.04);}
+.qpull p{font-family:var(--serif);font-size:.93rem;font-style:italic;color:var(--bg);line-height:1.6;}
+.qpull cite{display:block;margin-top:.25rem;font-size:.6rem;color:rgba(242,244,247,.28);font-style:normal;font-family:var(--mono);letter-spacing:.05em;}
+.pipe-eye{font-family:var(--mono);font-size:.56rem;letter-spacing:.11em;text-transform:uppercase;color:rgba(242,244,247,.26);margin-bottom:.25rem;}
+.pipe-sub{font-size:.74rem;color:rgba(242,244,247,.38);font-weight:300;margin-bottom:.6rem;}
+.pipe-grid{display:grid;grid-template-columns:1fr 1fr;gap:.38rem;}
+.ps{background:rgba(242,244,247,.06);border:.5px solid rgba(242,244,247,.1);padding:.6rem .65rem;display:flex;flex-direction:column;gap:.12rem;}
+.ps-n{font-family:var(--mono);font-size:.54rem;color:#c9a85c;}
+.ps-t{font-size:.68rem;font-weight:500;color:rgba(242,244,247,.82);line-height:1.22;}
+.ps-s{font-size:.58rem;color:rgba(242,244,247,.3);}
+.pipe-note{font-family:var(--mono);font-size:.57rem;color:rgba(242,244,247,.2);margin-top:.4rem;font-style:italic;}
+.rc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem;}
+.rc{padding:1.25rem;border:.5px solid var(--rule);background:var(--bg2);transition:transform .18s,border-color .18s;}
+.rc:hover{transform:translateY(-2px);border-color:var(--faint);}
+.rc-tag{display:inline-block;font-family:var(--mono);font-size:.55rem;letter-spacing:.09em;text-transform:uppercase;padding:.14rem .42rem;margin-bottom:.65rem;}
+.rc-tag.llm{background:var(--accent-l);color:var(--accent);}
+.rc-tag.mm{background:#d8e4f0;color:#2a4e7a;}
+.rc-tag.eth{background:var(--bg2);color:var(--muted);border:.5px solid var(--rule);}
+.rc-title{font-family:var(--serif);font-size:.9rem;font-weight:400;line-height:1.28;color:var(--dark);margin-bottom:.4rem;}
+.rc-body{font-size:.75rem;color:var(--muted);line-height:1.6;font-weight:300;margin-bottom:.6rem;}
+.rc-meta{font-family:var(--mono);font-size:.57rem;color:var(--faint);}
+.pub-note{margin-top:1.75rem;padding:1rem 1.2rem;background:var(--bg2);border:.5px solid var(--rule);display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.pub-note p{font-size:.8rem;color:var(--muted);font-weight:300;}
+.pub-note a{font-family:var(--mono);font-size:.63rem;color:var(--accent);text-decoration:none;white-space:nowrap;flex-shrink:0;}
+.pub-note a:hover{text-decoration:underline;}
+
+/* SKILLS */
+#skills{background:var(--bg2);padding:4rem 0;}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem;margin-top:1.5rem;}
+.sg-title{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:.5rem;padding-bottom:.3rem;border-bottom:.5px solid var(--rule);}
+.pills{display:flex;flex-wrap:wrap;gap:.25rem;}
+.pill{font-size:.7rem;padding:.2rem .5rem;border:.5px solid var(--rule);color:var(--muted);background:var(--bg);font-weight:300;}
+
+/* SPEAKING */
+#speaking{background:var(--bg);}
+.gov-block{background:var(--dark);padding:1.75rem;margin-bottom:2.25rem;}
+.gov-title{font-family:var(--serif);font-size:1.15rem;font-weight:300;line-height:1.25;color:var(--bg);margin-bottom:.85rem;}
+.gov-title em{font-style:italic;color:#c9a85c;}
+.gov-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.75rem;margin-bottom:.9rem;}
+.gov-p{font-size:.81rem;color:rgba(242,244,247,.54);line-height:1.78;font-weight:300;}
+.gov-note{font-family:var(--mono);font-size:.58rem;color:rgba(242,244,247,.26);}
+.gig-lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding-bottom:.35rem;border-bottom:.5px solid var(--rule);}
+.gig-row{display:grid;grid-template-columns:80px 1fr auto;gap:1.25rem;padding:.78rem 0;border-bottom:.5px solid var(--rule);align-items:baseline;}
+.gig-row:last-child{border-bottom:none;}
+.gig-yr{font-family:var(--mono);font-size:.62rem;color:var(--faint);}
+.gig-name{font-size:.83rem;color:var(--dark);}
+.gig-org{font-size:.71rem;color:var(--muted);font-weight:300;}
+.gig-type{font-family:var(--mono);font-size:.56rem;letter-spacing:.06em;text-transform:uppercase;padding:.11rem .42rem;background:var(--bg2);color:var(--muted);white-space:nowrap;}
+
+/* POLYMATH */
+#polymath{background:var(--bg2);}
+.polymath-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2rem;}
+.poly-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;}
+.poly-title{font-family:var(--serif);font-size:1.15rem;font-weight:300;color:var(--dark);margin-bottom:.6rem;line-height:1.25;}
+.poly-body{font-size:.85rem;color:var(--muted);line-height:1.75;font-weight:300;}
+.poly-photos{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;}
+
+/* FWA */
+#fwa{background:var(--bg);}
+.fwa-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.fwa-prose p{font-size:.92rem;color:var(--muted);line-height:1.85;font-weight:300;margin-bottom:.85rem;}
+.fwa-prose p strong{color:var(--dark);font-weight:500;}
+.fwa-prose p em{font-style:italic;color:var(--accent);}
+.fwa-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem;margin-top:1.5rem;}
+.fstat{padding:.9rem 1rem;background:var(--bg2);border:.5px solid var(--rule);}
+.fstat-n{font-family:var(--serif);font-size:1.85rem;font-weight:300;color:var(--accent);line-height:1;}
+.fstat-l{font-size:.68rem;color:var(--muted);font-weight:300;margin-top:.18rem;}
+.fwa-right{display:flex;flex-direction:column;gap:.75rem;}
+.fcard{padding:1.1rem 1.2rem;background:var(--bg2);border:.5px solid var(--rule);}
+.fcard-eye{font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem;}
+.fcard-title{font-family:var(--serif);font-size:.9rem;font-weight:400;color:var(--dark);margin-bottom:.28rem;}
+.fcard-body{font-size:.75rem;color:var(--muted);line-height:1.6;font-weight:300;}
+
+/* PRESS */
+#press{background:var(--bg2);}
+.press-row{display:flex;flex-direction:column;margin-top:2rem;}
+.press-item{display:grid;grid-template-columns:120px 1fr auto;gap:1.25rem;padding:.95rem 0;border-bottom:.5px solid var(--rule);align-items:baseline;text-decoration:none;}
+.press-item:first-child{padding-top:0;}
+.press-item:last-child{border-bottom:none;}
+.press-item:hover .press-headline{color:var(--accent);}
+.press-outlet{font-family:var(--mono);font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);}
+.press-headline{font-family:var(--serif);font-size:.93rem;font-weight:400;color:var(--dark);line-height:1.28;transition:color .18s;}
+.press-arr{font-size:.7rem;color:var(--faint);}
+
+/* CONTACT */
+#contact{background:var(--bg);padding:5rem 0;}
+#contact .eye{color:var(--faint);}
+#contact .stitle{color:var(--dark);}
+#contact .stitle em{color:var(--accent);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:2rem;}
+.contact-p{font-size:.87rem;color:var(--muted);line-height:1.82;font-weight:300;margin-bottom:1.5rem;}
+.contact-reasons{display:flex;flex-direction:column;gap:.5rem;}
+.cr{padding:.72rem .9rem;border:.5px solid var(--rule);}
+.cr-label{font-family:var(--mono);font-size:.57rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:.16rem;}
+.cr-body{font-size:.74rem;color:var(--muted);font-weight:300;line-height:1.48;}
+.c-links{display:flex;flex-direction:column;gap:.5rem;}
+.c-link{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--dark);font-size:.81rem;font-weight:300;padding:.65rem .9rem;border:.5px solid var(--rule);transition:border-color .18s;}
+.c-link:hover{border-color:var(--muted);}
+.c-icon{font-family:var(--mono);font-size:.64rem;width:20px;color:var(--faint);flex-shrink:0;}
+.c-arr{opacity:.35;margin-left:auto;}
+
+footer{background:var(--dark);border-top:.5px solid rgba(242,244,247,.06);padding:1.1rem 2.5rem;text-align:center;font-family:var(--mono);font-size:.58rem;color:rgba(242,244,247,.18);}
+
+@media(max-width:820px){
+  nav{padding:.7rem 1.25rem;}
+  .nav-links{gap:.85rem;}
+  .nav-links a{font-size:.6rem;}
+  .hero-inner,.about-grid,.fwa-grid,.research-top,.anchor-grid,.gov-grid,.contact-grid,.polymath-grid{grid-template-columns:1fr;gap:2rem;}
+  .band-inner{grid-template-columns:repeat(2,1fr);gap:1.25rem;}
+  .bstat{border-right:none;}
+  .rc-grid{grid-template-columns:1fr 1fr;}
+  .press-item{grid-template-columns:1fr auto;row-gap:.18rem;}
+  .press-outlet{grid-column:1/-1;}
+  .photo-strip,.poly-photos{grid-template-columns:1fr 1fr;}
+  .fwa-stats{grid-template-columns:1fr 1fr;}
+  section{padding:3.75rem 0;}
+  .gig-row{grid-template-columns:1fr auto;row-gap:.18rem;}
+  .gig-yr{grid-column:1/-1;}
+  .skills-grid{grid-template-columns:1fr;}
+  .qs-inner,.qs-inner-light,.qs-inner-blue{flex-direction:column;gap:.75rem;}
+  .qs-mark,.qs-mark-light,.qs-mark-blue{font-size:2.5rem;}
+}
+@media(max-width:560px){
+  .rc-grid,.photo-strip,.poly-photos{grid-template-columns:1fr;}
+  .anch-stats{grid-template-columns:1fr 1fr;}
+}
+/* LIGHTBOX */
+.lb-overlay{position:fixed;inset:0;z-index:9999;background:rgba(26,40,56,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .22s;}
+.lb-overlay.show{opacity:1;pointer-events:all;}
+.lb-img{max-width:88vw;max-height:88vh;object-fit:contain;border-radius:1px;box-shadow:0 20px 60px rgba(0,0,0,.5);}
+.lb-close{position:absolute;top:1.25rem;right:1.5rem;font-size:1.5rem;color:rgba(242,244,247,.5);cursor:pointer;font-family:var(--mono);line-height:1;transition:color .15s;}
+.lb-close:hover{color:rgba(242,244,247,.9);}
+img.zoomable{cursor:zoom-in;transition:opacity .15s;}
+img.zoomable:hover{opacity:.88;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hero" class="nav-logo">Ishita Pai Raikar</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#speaking">Speaking</a></li>
+    <li><a href="#fwa">FWA</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- 1. HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge">Engineer · Robotics · Responsible AI</span>
+      <h1 class="hero-name">I build the systems.<br>I question<br><em>why they exist.</em></h1>
+      <p class="hero-sub">AI researcher and engineer working at the intersection of embodied AI, human-robot interaction, and responsible AI governance. 3+ years building multimodal AI systems across robotics and assistive technology.</p>
+      <div class="btn-row">
+        <a href="#work" class="btn btn-dark">Experience</a>
+        <a href="#research" class="btn btn-ghost">Research</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="IPR_Headshot.jpeg" alt="Ishita Pai Raikar" style="width:100%;height:auto;display:block;border-radius:1px;" class="zoomable">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;">
+        <div class="fact"><p class="fact-label">Education</p><p class="fact-val">B.S. Computer Engineering, NC State · Minor in Philosophy</p></div>
+        <div class="fact"><p class="fact-label">Based</p><p class="fact-val">United States</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="band">
+  <div class="band-inner" style="grid-template-columns:repeat(3,1fr);">
+    <div class="bstat"><div class="bnum">3<em>+</em></div><div class="blabel">years building multimodal AI systems in robotics and assistive technology</div></div>
+    <div class="bstat"><div class="bnum">6<em>+</em></div><div class="blabel">research contributions across HRI, physiological AI, and ethics</div></div>
+    <div class="bstat"><div class="bnum">20</div><div class="blabel">IRB-approved HRI sessions, 50+ annotated segments</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- QUOTE 1: after hero / before about -->
+<div class="quote-stripe">
+  <div class="qs-inner">
+    <span class="qs-mark">"</span>
+    <div class="qs-body">
+      <p class="qs-text">What is AI? Is it only technological, or existential too? Extension of human intelligence, or its replacement? <em>I integrate my curiosity, my learnings, and my experiences to co-create the right perspective.</em></p>
+      <p class="qs-theme">On curiosity as compass</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 2. ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-prose">
+        <p class="eye">About</p>
+        <h2 class="stitle">Not just an engineer.<br><em>A translator.</em></h2>
+        <p>I grew up across <strong>India, Singapore, and the US</strong>. Those places shaped a core belief: technology is not simply a tool. It interacts with language, habits, culture, and trust.</p>
+        <div class="pullquote">"Entrepreneurship is the mapping of the world's abstractions into real, tangible change."</div>
+        <p>My mentor Phaedra Boinodiris calls it <strong>translation fluency</strong>: moving between technical and public understanding with intention. With engineers I lead with failure modes. With non-technical audiences I lead with outcomes. I switch on purpose.</p>
+        <p style="font-size:.78rem;color:var(--faint);line-height:1.65;margin-top:.5rem;">National Academy of Engineering Grand Challenges Scholar · RSA Fellow, UK (2024) · $34,000 across 8 competitive research terms · 2nd Place, IEEE SoutheastCon Ethics Competition</p>
+      </div>
+      <div>
+        <div class="constellation-wrap" id="const-wrap">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" id="const-svg">
+            <circle cx="150" cy="150" r="28" fill="#1a2838" stroke="#8ea5b5" stroke-width=".8" id="nc-0" style="cursor:pointer;"/>
+            <text x="150" y="147" font-family="Spectral,serif" font-size="9" font-style="italic" fill="rgba(242,244,247,.78)" text-anchor="middle" pointer-events="none">translator</text>
+            <text x="150" y="158" font-family="Spectral,serif" font-size="7" font-style="italic" fill="rgba(242,244,247,.35)" text-anchor="middle" pointer-events="none">Ishita</text>
+            <line x1="150" y1="122" x2="150" y2="60" stroke="rgba(26,40,56,.12)" stroke-width=".8"/>
+            <line x1="150" y1="178" x2="150" y2="240" stroke="rgba(26,40,56,.12)" stroke-width=".8"/>
+            <line x1="126" y1="138" x2="62" y2="100" stroke="rgba(26,40,56,.12)" stroke-width=".8"/>
+            <line x1="174" y1="138" x2="238" y2="100" stroke="rgba(26,40,56,.12)" stroke-width=".8"/>
+            <line x1="130" y1="162" x2="72" y2="212" stroke="rgba(26,40,56,.12)" stroke-width=".8"/>
+            <line x1="170" y1="162" x2="228" y2="212" stroke="rgba(26,40,56,.12)" stroke-width=".8"/>
+            <circle cx="150" cy="48" r="22" fill="#1a2838" fill-opacity=".88" stroke="#8ea5b5" stroke-width=".6" id="nc-1" style="cursor:pointer;transition:fill-opacity .18s;"/>
+            <text x="150" y="45" font-family="DM Mono,monospace" font-size="9" fill="#bdd8ce" text-anchor="middle" pointer-events="none">🤖</text>
+            <text x="150" y="57" font-family="DM Mono,monospace" font-size="6.5" fill="rgba(189,216,206,.65)" text-anchor="middle" pointer-events="none">Researcher</text>
+            <circle cx="244" cy="92" r="22" fill="#2a4840" fill-opacity=".88" stroke="#8ea5b5" stroke-width=".6" id="nc-2" style="cursor:pointer;transition:fill-opacity .18s;"/>
+            <text x="244" y="89" font-family="DM Mono,monospace" font-size="9" fill="#c9a85c" text-anchor="middle" pointer-events="none">💃</text>
+            <text x="244" y="101" font-family="DM Mono,monospace" font-size="6.5" fill="rgba(201,168,92,.65)" text-anchor="middle" pointer-events="none">Artist</text>
+            <circle cx="56" cy="92" r="22" fill="#243649" fill-opacity=".88" stroke="#8ea5b5" stroke-width=".6" id="nc-3" style="cursor:pointer;transition:fill-opacity .18s;"/>
+            <text x="56" y="89" font-family="DM Mono,monospace" font-size="9" fill="#c9a85c" text-anchor="middle" pointer-events="none">🎙</text>
+            <text x="56" y="101" font-family="DM Mono,monospace" font-size="6.5" fill="rgba(201,168,92,.65)" text-anchor="middle" pointer-events="none">Speaker</text>
+            <circle cx="228" cy="220" r="22" fill="#2e1e1e" fill-opacity=".88" stroke="#8ea5b5" stroke-width=".6" id="nc-4" style="cursor:pointer;transition:fill-opacity .18s;"/>
+            <text x="228" y="217" font-family="DM Mono,monospace" font-size="9" fill="#ead8c0" text-anchor="middle" pointer-events="none">👑</text>
+            <text x="228" y="229" font-family="DM Mono,monospace" font-size="6.5" fill="rgba(234,216,192,.65)" text-anchor="middle" pointer-events="none">Pageantry</text>
+            <circle cx="72" cy="220" r="22" fill="#1e3028" fill-opacity=".88" stroke="#8ea5b5" stroke-width=".6" id="nc-5" style="cursor:pointer;transition:fill-opacity .18s;"/>
+            <text x="72" y="217" font-family="DM Mono,monospace" font-size="9" fill="#bdd8ce" text-anchor="middle" pointer-events="none">🌏</text>
+            <text x="72" y="229" font-family="DM Mono,monospace" font-size="6.5" fill="rgba(189,216,206,.65)" text-anchor="middle" pointer-events="none">Advocate</text>
+            <circle cx="150" cy="252" r="22" fill="#1a2838" fill-opacity=".78" stroke="#8ea5b5" stroke-width=".6" id="nc-6" style="cursor:pointer;transition:fill-opacity .18s;"/>
+            <text x="150" y="249" font-family="DM Mono,monospace" font-size="9" fill="#c9a85c" text-anchor="middle" pointer-events="none">🧠</text>
+            <text x="150" y="261" font-family="DM Mono,monospace" font-size="6.5" fill="rgba(201,168,92,.65)" text-anchor="middle" pointer-events="none">Strategist</text>
+          </svg>
+          <p class="const-hint"><span>Hover</span> each circle to learn more</p>
+          <div class="const-detail" id="const-detail">
+            <p class="vd-label">Hover a node</p>
+            <p class="vd-title">Six identities. One translator.</p>
+            <p class="vd-body">Each circle is a genuine part of how I think and work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 2: blue, between about and work -->
+<div class="quote-stripe-blue">
+  <div class="qs-inner-blue">
+    <span class="qs-mark-blue">"</span>
+    <div class="qs-body">
+      <p class="qs-text-blue">I still remember that day. It was my sweet 16 birthday, and here I was folding and organising clothes for a school drive I had planned and led. <em>I realised I was doing this for self-fulfilment, rather than for fame or recognition.</em></p>
+      <p class="qs-theme-blue">On service as north star</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 3. EXPERIENCE -->
+<section id="work">
+  <div class="wrap">
+    <p class="eye">Experience</p>
+    <h2 class="stitle">Where I've <em>built</em> things.</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--accent);"></div>
+        <p class="tl-date">Jun 2026 to present</p>
+        <p class="tl-role">Research Assistant</p>
+        <p class="tl-org">TRUST Lab · Duke University · Dr. Brinnae Bent</p>
+        <ul class="tl-pts">
+          <li>Building end-to-end SFT and RL pipeline to reduce sycophancy in LLMs, training Llama and Qwen via LoRA and GRPO with asymmetric reward shaping and LLM-as-judge evaluation.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--accent);"></div>
+        <p class="tl-date">Feb 2026 to present</p>
+        <p class="tl-role">AI Strategy Intern</p>
+        <p class="tl-org">Future World Alliance</p>
+        <ul class="tl-pts">
+          <li>Translated cohort impact into funder-facing positioning; created 2 original AI ethics and governance series (19 episodes) across script, visual direction, and platform strategy.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <p class="tl-date">May 2025 to Apr 2026</p>
+        <p class="tl-role">Research Intern</p>
+        <p class="tl-org">Empathic Computing Lab · University of Auckland · Dr. Mark Billinghurst</p>
+        <ul class="tl-pts">
+          <li>Built standardized annotation infrastructure across 4 signal modalities; designed multimodal emotion recognition pipeline for 2 manuscripts aligned with Maori Data Sovereignty principles.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <p class="tl-date">May 2022 to Oct 2025</p>
+        <p class="tl-role">Robotics Research Assistant</p>
+        <p class="tl-org">Neurocomputational Ethics Research Group · NC State · Dr. Lobaton and Dr. Dubljević</p>
+        <ul class="tl-pts">
+          <li>Deployed full-stack embodied AI on SoftBank Pepper achieving ~4s latency with zero cloud dependency, integrating Whisper ASR and Ollama-hosted LLMs on NVIDIA Jetson AGX Orin.</li>
+          <li>Designed 20 IRB-approved sessions with older adults with MCI; 50+ annotated segments, 3 failure patterns fed into system redesign.</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--bg2);border-color:var(--faint);"></div>
+        <p class="tl-date">2024-2025</p>
+        <p class="tl-role" style="font-size:.92rem;">Gardian: AI-Powered Garden Protection Robot</p>
+        <p class="tl-org">Engineering Entrepreneurship Senior Design</p>
+        <ul class="tl-pts">
+          <li>85% on-device animal detection accuracy via Edge Impulse ML on ESP32-CAM; led team of 4 as CEO through 3 prototype iterations.</li>
+        </ul>
+      </div>
+    </div>
+    <a href="mailto:ishita.pairaikar@gmail.com?subject=CV Request" class="cv-link">↗ View resume or request full CV</a>
+  </div>
+</section>
+
+<!-- QUOTE 3: dark, between work and research -->
+<div class="quote-stripe">
+  <div class="qs-inner">
+    <span class="qs-mark">"</span>
+    <div class="qs-body">
+      <p class="qs-text">Old ways are not going to open new doors for us. In the presence of VUCA (Volatility, Uncertainty, Complexity, Ambiguity), we need to start cultivating change as part of our culture. <em>That is where the real magic is created.</em></p>
+      <p class="qs-theme">On leading in a VUCA world · TEDxYouth at Dover Court International School, 2020</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- QUOTE 3b: disruption-embracing -->
+<div class="quote-stripe-light">
+  <div class="qs-inner-light">
+    <span class="qs-mark-light">"</span>
+    <div class="qs-body">
+      <p class="qs-text-light">Shifting from disruption-anxious to disruption-embracing is <em>🗝️ to true innovation.</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 4. RESEARCH -->
+<section id="research">
+  <div class="wrap">
+    <div class="research-top">
+      <div>
+        <p class="eye">Research</p>
+        <h2 class="stitle">Where the<br>work <em>lives.</em></h2>
+      </div>
+      <p class="lead">Systems that work for real people, in real conditions, with real constraints on privacy and compute. The hard part of robotics is not the robot. It is trust.</p>
+    </div>
+
+    <div class="anchor">
+      <div class="anchor-grid">
+        <div>
+          <p class="anch-eye">Anchor research · NC State · 2022-2025</p>
+          <h3 class="anch-title">Embodied social AI for older adults with mild cognitive impairment</h3>
+          <p class="anch-body">SoftBank Pepper on NVIDIA Jetson AGX Orin. Whisper ASR, Ollama-hosted LLMs. Zero cloud. 20 IRB-approved sessions, EDA physiological signal capture, 3 recurring failure patterns fed back into system redesign.</p>
+          <div class="anch-stats">
+            <div class="astat"><div class="astat-n">20</div><div class="astat-l">participants, IRB-approved</div></div>
+            <div class="astat"><div class="astat-n">~4s</div><div class="astat-l">end-to-end latency</div></div>
+            <div class="astat"><div class="astat-n">0</div><div class="astat-l">cloud dependencies</div></div>
+          </div>
+          <div class="qpull">
+            <p>"What should I say so it understands?"</p>
+            <cite>A participant · the question that defines the HRI design problem</cite>
+          </div>
+        </div>
+        <div>
+          <img src="IPR/IPR_Lab.jfif" alt="Study session" style="width:100%;height:auto;display:block;border-radius:1px;" class="zoomable">
+          <div style="margin-top:.75rem;">
+            <p class="pipe-eye">On-device pipeline · NVIDIA Jetson AGX Orin</p>
+            <p class="pipe-sub">Real-time · ~4s speech to robot response</p>
+            <div class="pipe-grid">
+              <div class="ps"><span class="ps-n">01</span><span class="ps-t">Voice Activity Detection</span><span class="ps-s">webrtcvad</span></div>
+              <div class="ps"><span class="ps-n">02</span><span class="ps-t">Audio Transcription</span><span class="ps-s">Whisper ASR</span></div>
+              <div class="ps"><span class="ps-n">03</span><span class="ps-t">Prompt Construction</span><span class="ps-s">Q + A + sentiment</span></div>
+              <div class="ps"><span class="ps-n">04</span><span class="ps-t">Sentiment Classification</span><span class="ps-s">heuristic + phi-3mini</span></div>
+              <div class="ps"><span class="ps-n">05</span><span class="ps-t">Contextual Response</span><span class="ps-s">LLM via Ollama</span></div>
+              <div class="ps"><span class="ps-n">06</span><span class="ps-t">Speech + Gesture</span><span class="ps-s">Pepper via SSH</span></div>
+            </div>
+            <p class="pipe-note">Each turn updates the next prompt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rc-grid" style="margin-bottom:1.5rem;">
+      <div class="rc"><span class="rc-tag llm">Reinforcement Learning</span><h3 class="rc-title">Reducing sycophancy in LLMs via RL</h3><p class="rc-meta">Duke TRUST Lab · 2026</p></div>
+      <div class="rc"><span class="rc-tag mm">Multimodal AI</span><h3 class="rc-title">Emotion recognition grounded in Maori Data Sovereignty</h3><p class="rc-meta">University of Auckland · 2025-2026</p></div>
+      <div class="rc"><span class="rc-tag eth">AI Ethics</span><h3 class="rc-title">Public narratives in autonomous systems ethics</h3><p class="rc-meta">NC State · 2022-2023</p></div>
+    </div>
+
+    <div class="pub-note">
+      <p>2 published · 2 under review · 1 book chapter under review · 3 in preparation across HRI, assistive robotics, physiological AI, and ethics.</p>
+      <a href="mailto:ishita.pairaikar@gmail.com?subject=CV Request - Publications">Request full CV ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 4: blue, between research and skills -->
+<div class="quote-stripe-blue">
+  <div class="qs-inner-blue">
+    <span class="qs-mark-blue">"</span>
+    <div class="qs-body">
+      <p class="qs-text-blue">Through this exploration representing dance choreography through mathematical models, I was able to showcase the blend of problem-solving and artistic thinking. <em>It was fascinating to see an aesthetic dance form embodying mathematical themes.</em></p>
+      <p class="qs-theme-blue">On dance and mathematics · IB Mathematics Internal Assessment</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 5. TECHNICAL SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <p class="eye">Technical skills</p>
+    <h2 class="stitle">The <em>toolkit.</em></h2>
+    <div class="skills-grid">
+      <div>
+        <p class="sg-title">AI and ML</p>
+        <div class="pills"><span class="pill">LLM pipelines</span><span class="pill">Agentic AI</span><span class="pill">Reinforcement Learning</span><span class="pill">Deep RL</span><span class="pill">World Models</span><span class="pill">Multimodal System Design</span><span class="pill">Whisper ASR</span><span class="pill">RAG</span><span class="pill">PyTorch</span><span class="pill">Signal Processing</span><span class="pill">torchaudio</span><span class="pill">librosa</span></div>
+      </div>
+      <div>
+        <p class="sg-title">Physical AI and Robotics</p>
+        <div class="pills"><span class="pill">Humanoid Robotics</span><span class="pill">Human-Robot Interaction</span><span class="pill">ROS</span><span class="pill">NVIDIA Isaac Sim</span><span class="pill">MuJoCo</span><span class="pill">NVIDIA Jetson AGX Orin</span><span class="pill">On-device Inference</span><span class="pill">Sensor Fusion</span><span class="pill">Manipulation</span><span class="pill">Locomotion</span><span class="pill">Sim-to-Real Transfer</span><span class="pill">Assistive Robotics</span><span class="pill">Embodied AI</span></div>
+      </div>
+      <div>
+        <p class="sg-title">Tools</p>
+        <div class="pills"><span class="pill">Python</span><span class="pill">C</span><span class="pill">C++</span><span class="pill">Git</span><span class="pill">Docker</span><span class="pill">Agile</span><span class="pill">Annotation Infrastructure</span><span class="pill">Evaluation Pipelines</span><span class="pill">Model Benchmarking</span></div>
+      </div>
+      <div>
+        <p class="sg-title">Responsible AI</p>
+        <div class="pills"><span class="pill">Ethical AI Governance</span><span class="pill">Safety-Critical System Design</span><span class="pill">IRB-Approved Study Design</span><span class="pill">Cross-Cultural AI</span><span class="pill">Policy Communication</span><span class="pill">Human-Subject Research Protocols</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 5: dark, between skills and speaking -->
+<div class="quote-stripe">
+  <div class="qs-inner">
+    <span class="qs-mark">"</span>
+    <div class="qs-body">
+      <p class="qs-text">"Vasudhaiva Kutumbakam": the whole world is one family. These practised beliefs make terms like discrimination and exclusion feel <em>alien</em> to me. My culture gives me my strength and my purpose.</p>
+      <p class="qs-theme">On Vasudhaiva Kutumbakam</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 6. SPEAKING AND GOVERNANCE -->
+<section id="speaking">
+  <div class="wrap">
+    <p class="eye">Speaking and Governance</p>
+    <h2 class="stitle">Bringing complex ideas<br>into the <em>room.</em></h2>
+
+    <div class="gov-block">
+      <p style="font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,244,247,.26);margin-bottom:.55rem;">AI Governance Consulting</p>
+      <h3 class="gov-title">I help organizations answer two questions:<br><em>Are we building the right AI, and are we building AI right?</em></h3>
+      <div class="gov-grid">
+        <p class="gov-p">Through structured workshops, I help teams identify stakeholders, map potential impacts and risks, determine which governance principles matter most for a specific use case, and establish clear accountability through RACI frameworks.</p>
+        <p class="gov-p">For organizations deploying or procuring AI, I develop governance blueprints: requirements, audit processes, escalation pathways, disclosure standards, and vendor accountability mechanisms. Recent focus: healthcare and public sector AI.</p>
+      </div>
+      <p class="gov-note">Approach informed by mentorship from Phaedra Boinodiris, IBM Consulting's Responsible AI Leader.</p>
+      <div style="margin-top:1.1rem;"><a href="#contact" class="btn btn-accent" style="font-size:.72rem;">Discuss a governance project</a></div>
+    </div>
+
+    <p class="gig-lbl" style="margin-bottom:0;">Past engagements</p>
+    <div class="gig-row">
+      <span class="gig-yr">2020</span>
+      <div><div class="gig-name">What Kind of World Will We Be Living in the Future?</div><div class="gig-org">TEDxYouth Dover Court International School, Singapore · 100+ audience · Published on TED.com</div></div>
+      <span class="gig-type">TEDx Talk</span>
+    </div>
+    <div class="gig-row">
+      <span class="gig-yr">2024</span>
+      <div><div class="gig-name">AI Revolution: EthicsQuest Across Disciplines</div><div class="gig-org">NC State + Future World Alliance + 15+ institutional partners · Series host and moderator</div></div>
+      <span class="gig-type">Series host</span>
+    </div>
+    <div class="gig-row">
+      <span class="gig-yr">2025</span>
+      <div><div class="gig-name">Beyond the Algorithm: Thinking Critically, Leading Boldly, and Thriving in an AI-Driven World</div><div class="gig-org">SparkNC · The Exchange 2025 · UNC Wilmington · Statewide event for ambitious NC high school students in AI, cybersecurity, and software development</div></div>
+      <span class="gig-type">Keynote</span>
+    </div>
+    <div class="gig-row">
+      <span class="gig-yr">2025</span>
+      <div><div class="gig-name">Leading the AI Revolution: Ethical Leadership in a VUCA World</div><div class="gig-org">The William and Ida Friday Institute for Educational Innovation, NC State · Why Students Must Drive the Future</div></div>
+      <span class="gig-type">Guest Speaker</span>
+    </div>
+    <div class="gig-row">
+      <span class="gig-yr">2025</span>
+      <div><div class="gig-name">Panel Moderator · AI, Ethics, Industry and Academia</div><div class="gig-org">National Academy of Engineering Grand Challenges Scholars Program Network Annual Meeting, NC State</div></div>
+      <span class="gig-type">Moderator</span>
+    </div>
+    <div class="gig-row">
+      <span class="gig-yr">2026</span>
+      <div><div class="gig-name">Smart Maps, Smarter AI: Who's Leading?</div><div class="gig-org">NC State Data Science & AI Academy · Moderator</div></div>
+      <span class="gig-type">Moderator</span>
+    </div>
+    <div style="margin-top:2rem;"><a href="#contact" class="btn btn-dark">Invite me to speak</a></div>
+  </div>
+</section>
+
+<!-- QUOTE 6: blue, between speaking and polymath - rewritten humbly -->
+<div class="quote-stripe-blue">
+  <div class="qs-inner-blue">
+    <span class="qs-mark-blue">"</span>
+    <div class="qs-body">
+      <p class="qs-text-blue">A pageant and a research conference in the same week. The skills turned out to be the same: precision, presence, and the willingness to be seen. <em>What I learned is that the ramp you stand on does not define you. The ideas you carry onto it do.</em></p>
+      <p class="qs-theme-blue">On being a polymath</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 8. FWA -->
+<section id="fwa">
+  <div class="wrap">
+    <p class="eye">Future World Alliance</p>
+    <h2 class="stitle">AI education for the<br>people <em>left out</em> of the room.</h2>
+    <div class="fwa-grid">
+      <div>
+        <div class="fwa-prose">
+          <p>Future World Alliance is a 501(c)3 nonprofit with a single thesis: <strong>the ability to create with AI should belong to everyone</strong>, especially those the future has too often left behind.</p>
+          <p>As AI Strategy Intern, I translated cohort impact into funder-facing positioning, created original AI ethics and governance content series, and shaped the narrative that makes FWA's mission legible to partners and funders.</p>
+          <p>FWA's model rests on a principle I hold deeply: <em>you don't learn to build with AI by watching. You learn by building.</em></p>
+        </div>
+        <div class="fwa-stats">
+          <div class="fstat"><div class="fstat-n">121</div><div class="fstat-l">learners across 18 countries</div></div>
+          <div class="fstat"><div class="fstat-n">73%</div><div class="fstat-l">community participation rate</div></div>
+          <div class="fstat"><div class="fstat-n">189</div><div class="fstat-l">projects shipped in 4 weeks</div></div>
+          <div class="fstat"><div class="fstat-n">19</div><div class="fstat-l">episodes across 2 original AI ethics series</div></div>
+        </div>
+      </div>
+      <div class="fwa-right">
+        <div class="fcard"><p class="fcard-eye">Funder positioning</p><h3 class="fcard-title">Turning cohort data into narrative</h3><p class="fcard-body">Surfaced the 48% AI Launchpad completion rate against industry benchmarks and built the data story that makes FWA's impact legible to institutional partners.</p></div>
+        <div class="fcard"><p class="fcard-eye">Content creation</p><h3 class="fcard-title">19 episodes across 2 original series</h3><p class="fcard-body">Script, visual direction, and platform strategy end to end. AI ethics and governance made accessible to non-technical audiences.</p></div>
+        <div class="fcard"><p class="fcard-eye">EthicsQuest</p><h3 class="fcard-title">AI Revolution panel series co-creator</h3><p class="fcard-body">15+ institutional partners, co-created with NC State's Data Science Academy, featuring Dean Yannis Yortsos.</p></div>
+        <img src="IPR/IPR_Panel.jfif" alt="Panel event" style="width:100%;height:auto;display:block;border-radius:1px;" class="zoomable">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 8: blue, before press -->
+<div class="quote-stripe-blue">
+  <div class="qs-inner-blue">
+    <span class="qs-mark-blue">"</span>
+    <div class="qs-body">
+      <p class="qs-text-blue">When collective consciousness shifts, great transformations are inevitable. <em>We choose hope over helplessness in the presence of escalating issues within our communities.</em></p>
+      <p class="qs-theme-blue">On GlobeUplift and collective action</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 9. PRESS -->
+<section id="press">
+  <div class="wrap">
+    <p class="eye">Press</p>
+    <h2 class="stitle">As seen <em>in.</em></h2>
+    <div class="press-row">
+      <a href="https://ece.ncsu.edu/2025/ishita-pai-raikar-building-a-community/" target="_blank" class="press-item"><span class="press-outlet">NC State ECE</span><span class="press-headline">Building a Community</span><span class="press-arr">↗</span></a>
+      <a href="https://entrepreneurship.ncsu.edu/news/2025/12/10/ishita-pai-raikar-innovation-at-the-intersection-of-people-and-technology/" target="_blank" class="press-item"><span class="press-outlet">NC State Entrepreneurship</span><span class="press-headline">Innovation at the Intersection of People and Technology</span><span class="press-arr">↗</span></a>
+      <a href="https://ece.ncsu.edu/2024/multifaceted-summer-ishita-pai-raikars-blend-of-research-entrepreneurship-and-advocacy/" target="_blank" class="press-item"><span class="press-outlet">NC State ECE</span><span class="press-headline">Multifaceted Summer: Research, Entrepreneurship, and Advocacy</span><span class="press-arr">↗</span></a>
+      <a href="https://www.ted.com/talks/ishita_pai_raikar_what_kind_of_world_will_we_be_living_in_the_future" target="_blank" class="press-item"><span class="press-outlet">TED.com</span><span class="press-headline">What Kind of World Will We Be Living in the Future?</span><span class="press-arr">↗</span></a>
+      <a href="https://exceptionalundergrads.com/ishita-pai-raikar" target="_blank" class="press-item"><span class="press-outlet">Exceptional Undergrads</span><span class="press-headline">Innovate and Inspire: Building Bridges Between Fields</span><span class="press-arr">↗</span></a>
+      <a href="https://ceng.calpoly.edu/connection/2024/08/ai-ethics-panel-series/" target="_blank" class="press-item"><span class="press-outlet">Cal Poly Engineering</span><span class="press-headline">AI Ethics Panel Series</span><span class="press-arr">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 9: final dark quote before contact -->
+<div class="quote-stripe">
+  <div class="qs-inner">
+    <span class="qs-mark">"</span>
+    <div class="qs-body">
+      <p class="qs-text">Depth comes from doing. You have to work on hard problems in the real world to think of anything worth thinking about. <em>Thought is downstream of life.</em></p>
+      <p class="qs-theme">On the last human moat · April 2026</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- 10. CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <p class="eye">Contact</p>
+    <h2 class="stitle">Let's build something<br><em>that matters.</em></h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-p">Open to conversations across research, speaking, governance consulting, and mentorship.</p>
+        <div class="contact-reasons">
+          <div class="cr"><p class="cr-label">Research roles and PhD</p><p class="cr-body">Embodied AI, HRI, responsible AI governance, multimodal sensing.</p></div>
+          <div class="cr"><p class="cr-label">Speaking and keynotes</p><p class="cr-body">AI ethics, governance, embodied AI, equity, translation fluency, the polymath identity.</p></div>
+          <div class="cr"><p class="cr-label">AI governance consulting</p><p class="cr-body">Stakeholder mapping, RACI frameworks, governance blueprints, audit processes. Healthcare and public sector focus.</p></div>
+          <div class="cr"><p class="cr-label">Mentorship</p><p class="cr-body">Students navigating research, fellowships, early-career AI. Especially cross-disciplinary paths.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="c-links">
+          <a href="mailto:ishita.pairaikar@gmail.com" class="c-link"><span class="c-icon">✉</span><span>ishita.pairaikar@gmail.com</span><span class="c-arr">↗</span></a>
+          <a href="https://www.linkedin.com/in/ishita-pai-raikar" target="_blank" class="c-link"><span class="c-icon">in</span><span>linkedin.com/in/ishita-pai-raikar</span><span class="c-arr">↗</span></a>
+          <a href="https://github.com/ishitapairaikar" target="_blank" class="c-link"><span class="c-icon">gh</span><span>github.com/ishitapairaikar</span><span class="c-arr">↗</span></a>
+          <a href="https://www.ted.com/talks/ishita_pai_raikar_what_kind_of_world_will_we_be_living_in_the_future" target="_blank" class="c-link"><span class="c-icon">TED</span><span>TEDx talk</span><span class="c-arr">↗</span></a>
+        </div>
+        <img src="IPR/IPR_Graduate.jpg" alt="Graduation" style="width:100%;height:auto;display:block;border-radius:1px;margin-top:.75rem;" class="zoomable">
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--bg2);border-top:.5px solid var(--rule);padding:1.1rem 2.5rem;text-align:center;font-family:var(--mono);font-size:.58rem;color:var(--faint);">2026 Ishita Pai Raikar · United States · ishita.pairaikar@gmail.com</footer>
+
+<!-- LIGHTBOX OVERLAY -->
+<div class="lb-overlay" id="lb">
+  <span class="lb-close" id="lb-close">✕</span>
+  <img class="lb-img" id="lb-img" src="" alt="">
+</div>
+
+<script>
+// CONSTELLATION
+const nodeData = {
+  'nc-0':{label:'The whole person',title:'Six identities. One translator.',body:'Researcher, artist, communicator, strategist, advocate, and pageant titleholder. Each is a genuine part of how I think and work.'},
+  'nc-1':{label:'Researcher and Engineer',title:'3+ years embodied AI in assistive care',body:'HRI on SoftBank Pepper, RL at Duke TRUST Lab, multimodal emotion recognition at University of Auckland. 6+ publications. $34,000 in competitive research funding.'},
+  'nc-2':{label:'Artist',title:'14 years Bharatanatyam. TEDxYouth at 16.',body:'Classically trained under Guru Vidushi Dr. M.S. Srilakshmi. Arangetram debut before 400+. Aryabhata International Award. Dance movement grammar informed robot gesture design.'},
+  'nc-3':{label:'Public Communicator',title:'TEDxYouth, panels, congressional briefings, keynotes',body:'TEDxYouth on TED.com. SparkNC keynote at The Exchange 2025. EthicsQuest moderator, 15+ institutional partners. DC FIIDS advocacy. IEEE Ethics Competition, 2nd place.'},
+  'nc-4':{label:'Miss India Worldwide 2024, Top 5',title:'Miss India USA 2023, 2nd Runner-up · Miss India NC 2022, 2nd Runner-up',body:'Used the platform to advocate for women in STEM and AI ethics. The ramp you stand on does not define you. The ideas you carry onto it do.'},
+  'nc-5':{label:'Cross-cultural Advocate',title:'India, Singapore, US · DC policy · GlobeUplift',body:'Founded GlobeUplift at 16: 65 ambassadors, 6 countries, 600+ healthcare workers honoured. DC congressional AI ethics briefings. Social Innovation Fellow, NC Blue Economy Report 2024.'},
+  'nc-6':{label:'Responsible AI Strategist',title:'Governance frameworks, ethics curriculum',body:'AI governance blueprints, RACI frameworks, stakeholder mapping. FWA AI ethics content. EthicsQuest co-creator. Informed by IBM AI Governance in Action methodology via Phaedra Boinodiris.'}
+};
+const detail = document.getElementById('const-detail');
+document.querySelectorAll('[id^="nc-"]').forEach(node => {
+  node.addEventListener('mouseenter', () => {
+    const d = nodeData[node.id];
+    if (!d) return;
+    detail.innerHTML = `<p class="vd-label">${d.label}</p><p class="vd-title">${d.title}</p><p class="vd-body">${d.body}</p>`;
+    detail.classList.add('show');
+    node.style.fillOpacity = '1';
+  });
+  node.addEventListener('mouseleave', () => {
+    detail.classList.remove('show');
+    node.style.fillOpacity = '';
+  });
+});
+
+// LIGHTBOX: works on any <img class="zoomable"> or any <img> inside .imgph-real
+const lb = document.getElementById('lb');
+const lbImg = document.getElementById('lb-img');
+const lbClose = document.getElementById('lb-close');
+
+function openLb(src, alt) {
+  lbImg.src = src;
+  lbImg.alt = alt || '';
+  lb.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb() {
+  lb.classList.remove('show');
+  document.body.style.overflow = '';
+  setTimeout(() => { lbImg.src = ''; }, 220);
+}
+
+document.querySelectorAll('img.zoomable').forEach(img => {
+  img.addEventListener('click', () => openLb(img.src, img.alt));
+});
+
+lbClose.addEventListener('click', closeLb);
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
+</body>
+</html>
